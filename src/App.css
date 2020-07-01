@@ -6,15 +6,10 @@
 
 html, body {
   height: 100%;
-  background-color: yellow;
 }
 
 ul {
   list-style: none;
-}
-
-li {
-  display: inline;
 }
 
 a {
@@ -65,6 +60,7 @@ a {
 
 .nevi .navi-right li {
   padding-left: 50px;
+  display: inline;
 }
 
 .nevi_wrap {
@@ -84,12 +80,12 @@ a {
 }
 
 .about {
-  height: 500px;
-  background-color: skyblue;
+  height: 550px;
+  background-color: #f4fff5;
 }
 
 .about .about_wrap {
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -104,19 +100,16 @@ a {
 .about .about_content {
   height: 100%;
   padding-bottom: 217px;
-  position: relative;
 }
 
 .about .about_content .about_img {
   display: inline-block;
-  position: absolute;
-  float: left;
   width: 50%;
 }
 
 .about .about_content .about_img img {
-  width: 600px;
-  height: 250px;
+  width: 80%;
+  height: 270px;
   border: outset 1px gray;
 }
 
@@ -130,8 +123,19 @@ a {
   float: right;
 }
 
+.about .about_content .about_text_wrap h4 {
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
 .about .about_content .about_text_wrap p {
-  font-size: 15px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.about .about_content .about_text_wrap li {
+  font-size: 14px;
+  padding-bottom: 5px;
 }
 
 .tech_wrap {

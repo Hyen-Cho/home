@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import FixedWidthIcons from "./icon/icons";
 
 class App2 extends Component {
   render() {
@@ -60,17 +61,18 @@ class About extends Component {
       <div className="about">
         <div className="about_wrap">
           <div className="about_title">
-            <h1>About Hyein</h1>
+            <h1>About <i>'Hyein'</i></h1>
           </div>
           <div className="about_content">
             <div className="about_img">
-              <img />
+              <img src="img/my_photo.jpg" />
             </div>
             <div className="about_text_wrap">
               <h4>"Never Back Down"</h4>
               <p>
-                개발자라면 갖춰야 할 덕목은 탄탄한 Mental 이라고 생각합니다.
-                관심가지고 노력하면 나의 한계를 뛰어넘을 수 있다.
+                개발자라면 갖춰야 할 덕목은 탄탄한 <strong>"Mental"</strong> 이라고 생각합니다.
+                어려운 문제가 닥쳐오더라도 단단한 멘탈을 기반으로
+                관심가지고 노력하면 결국에는 자신의 한계를 뛰어넘을 수 있습니다.
             </p>
               <p>
                 저는 항상 사회생활을 하면서 서로에게 win-win이 되는 관계를 지향해왔습니다.
@@ -79,14 +81,14 @@ class About extends Component {
             </p>
               <h4>"Values"</h4>
               <ul>
-                <li><i></i>위기를 기회로 바꾸자</li>
-                <li><i></i>따라올 자 없다고 자부하는 근면성실함과 책임감</li>
-                <li><i></i>원만한 대인관계를 바탕으로 한 효율적인 커뮤니케이션 스킬</li>
+                <li><FixedWidthIcons />위기를 기회로 바꾸자</li>
+                <li><FixedWidthIcons />따라올 자 없다고 자부하는 근면성실함과 책임감</li>
+                <li><FixedWidthIcons />원만한 대인관계를 바탕으로 한 효율적인 커뮤니케이션 스킬</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
+      </div >
     )
   }
 }
