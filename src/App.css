@@ -85,7 +85,7 @@ a {
 }
 
 .about .about_wrap {
-  width: 70%;
+  width: 65%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -110,7 +110,7 @@ a {
 .about .about_content .about_img img {
   width: 80%;
   height: 270px;
-  border: outset 1px gray;
+  border: none;
 }
 
 .about .about_content .about_img p {
@@ -183,7 +183,45 @@ a {
   font-size: 25px;
 }
 
-.project_wrap {
-  height: 100vh;
+.project {
+  width: 100%;
+  padding: 70px 0px 80px;
   background-color: aquamarine;
+}
+
+.project .project_wrap {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project .project_wrap .project_title { 
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.project .project_wrap .project_content {
+  width: 50%;
+  float: left;
+  padding: 0px 30px 30px 0px;
+}
+
+.project .project_wrap .project_content img{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.project .project_wrap .project_content .content h4 {
+  font-size: 20px;
+  padding: 3px 0px;
+}
+
+.project .project_wrap .project_content .content {
+  padding: 3px 0px 0px 0px;
+}
+
+.project .project_wrap .project_content .content p {
+  padding: 5px 0px;
 }
