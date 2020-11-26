@@ -17,23 +17,52 @@ class App2 extends Component {
 }
 
 class Nevi extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isActive: 'nevi'
+    }
+    this.scrollHandler = this.scrollHandler.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.scrollHandler);
+    window.addEventListener('click', this.clickHandler);
+  }
+  scrollHandler(e) {
+    if (window.scrollY > 400) {
+      this.setState({ isActive: 'nevi-active' });
+      console.log('d');
+    } else if (window.scrollY <= 400) {
+      this.setState({ isActive: 'nevi' });
+    }
+  }
+
+  clickHandler(e) {
+    window.scrollY = 400;
+  }
+
   render() {
     return (
-      <div className="nevi">
+      <div className={this.state.isActive}>
         <div className="nevi_wrap">
           <div className="navi-left page-scroll">
-            <a className="navbar-home" href="#page-top">PortFolio</a>
+            <a className="navbar-home" href="#page-top">Hyein World</a>
           </div>
           <div className="navi-right">
             <ul>
               <li className="page-scroll">
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio">About</a>
               </li>
               <li className="page-scroll">
-                <a href="#about">About</a>
+                <a href="#about" onClick={this.clickHandler}>Skills</a>
               </li>
               <li className="page-scroll">
-                <a href="#contact">Contact</a>
+                <a href="#contact">Technic</a>
+              </li>
+              <li className="page-scroll">
+                <a href="#contact">Project</a>
               </li>
             </ul>
           </div>
@@ -65,7 +94,7 @@ class About extends Component {
           </div>
           <div className="about_content">
             <div className="about_img">
-              <img src="img/my_photo.jpg" />
+              <img src={process.env.PUBLIC_URL + "/img/my_photo.jpg"} />
             </div>
             <div className="about_text_wrap">
               <h4>"Never Back Down"</h4>
@@ -105,67 +134,67 @@ class Technic extends Component {
             <ul>
               <li>
                 <div>
-                  <img src="img/Java_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/Java_logo.png"} alt="1" />
                 </div>
                 <p>Java</p>
               </li>
               <li>
                 <div>
-                  <img src="img/HTML_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/HTML_logo.png"} alt="1" />
                 </div>
                 <p>HTML</p>
               </li>
               <li>
                 <div>
-                  <img src="img/CSS_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/CSS_logo.png"} alt="1" />
                 </div>
                 <p>CSS</p>
               </li>
               <li>
                 <div>
-                  <img src="img/JavaScript_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/JavaScript_logo.png"} alt="1" />
                 </div>
                 <p>JavaScript</p>
               </li>
               <li>
                 <div>
-                  <img src="img/jsp_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/jsp_logo.png"} alt="1" />
                 </div>
                 <p>JSP</p>
               </li>
               <li>
                 <div>
-                  <img src="img/React_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/React_logo.png"} alt="1" />
                 </div>
                 <p>React</p>
               </li>
               <li>
                 <div>
-                  <img src="img/JQeury_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/JQeury_logo.png"} alt="1" />
                 </div>
                 <p>JQuery</p>
               </li>
               <li>
                 <div>
-                  <img src="img/Spring_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/Spring_logo.png"} alt="1" />
                 </div>
                 <p>Spring</p>
               </li>
               <li>
                 <div>
-                  <img src="img/sql_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/sql_logo.png"} alt="1" />
                 </div>
                 <p>SQL</p>
               </li>
               <li>
                 <div>
-                  <img src="img/ibatis_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/ibatis_logo.png"} alt="1" />
                 </div>
                 <p>ibatis</p>
               </li>
               <li>
                 <div>
-                  <img src="img/mybatis_logo.png" alt="1" />
+                  <img src={process.env.PUBLIC_URL + "/img/mybatis_logo.png"} alt="1" />
                 </div>
                 <p>mybatis</p>
               </li>
@@ -187,7 +216,7 @@ class Project extends Component {
           </div>
           <div className="project_content">
             <div className="content_img">
-              <img src="img/project_kakao.png" />
+              <img src={process.env.PUBLIC_URL + "/img/project_kakao.png"} />
             </div>
             <div className="content">
               <span>2019.05.27 ~ 2019.06.11 (15일)</span>
@@ -202,7 +231,7 @@ class Project extends Component {
           </div>
           <div className="project_content">
             <div className="content_img">
-              <img src="img/project_camping.jpg" />
+              <img src={process.env.PUBLIC_URL + "/img/project_camping.jpg"} />
             </div>
             <div className="content">
               <span>2019.7.22 ~ 2019.8.19 (29일)</span>
@@ -217,7 +246,7 @@ class Project extends Component {
           </div>
           <div className="project_content">
             <div className="content_img">
-              <img src="img/project_kanbanboard.PNG" />
+              <img src={process.env.PUBLIC_URL + "/img/project_kanbanboard.PNG"} />
             </div>
             <div className="content">
               <span>2020.05.18 ~ 2020.05.25 (7일)</span>
@@ -234,7 +263,7 @@ class Project extends Component {
           </div>
           <div className="project_content">
             <div className="content_img">
-              <img src="img/project_dropZone.PNG" />
+              <img src={process.env.PUBLIC_URL + "/img/project_dropZone.PNG"} />
             </div>
             <div className="content">
               <span>2020.05.26 ~ 2020.06.03 (8일)</span>
